@@ -1,3 +1,5 @@
+# FORKED TO DEBUG LINUX CMake build (Baldur van Lew)
+
 # Advanced Docking System for Qt
 
 [![Build status](https://github.com/githubuser0xFFFF/Qt-Advanced-Docking-System/workflows/linux-builds/badge.svg)](https://github.com/githubuser0xFFFF/Qt-Advanced-Docking-System/actions?query=workflow%3Alinux-builds)

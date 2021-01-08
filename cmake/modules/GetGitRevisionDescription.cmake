@@ -113,6 +113,7 @@ function(git_describe _var)
 	#endif()
 
 	#message(STATUS "Arguments to execute_process: ${ARGN}")
+	message("Calling git describe with: git ${GIT_EXECUTABLE} \n workdir ${CMAKE_CURRENT_SOURCE_DIR} \n args ${ARGN} \n hash ${hash}" )
 
 	execute_process(COMMAND
 		"${GIT_EXECUTABLE}"
