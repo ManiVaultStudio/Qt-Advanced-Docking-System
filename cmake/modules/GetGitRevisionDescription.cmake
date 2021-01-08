@@ -132,6 +132,8 @@ function(git_describe _var)
 		out
 		ERROR_QUIET
 		OUTPUT_STRIP_TRAILING_WHITESPACE)
+
+	message(result of git describe: res ${res} \n output ${out}" )
 	if(NOT res EQUAL 0)
 		set(out "${out}-${res}-NOTFOUND")
 	endif()
