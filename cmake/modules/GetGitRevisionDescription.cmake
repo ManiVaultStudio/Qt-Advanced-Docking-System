@@ -91,6 +91,7 @@ function(get_git_head_revision _refspecvar _hashvar)
 endfunction()
 
 function(git_describe _var)
+	message("In git_describe")
 	if(NOT GIT_FOUND)
 		find_package(Git QUIET)
 	endif()

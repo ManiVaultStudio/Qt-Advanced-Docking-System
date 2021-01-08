@@ -1,6 +1,8 @@
 cmake_minimum_required(VERSION 3.5)
+message("Adding ${CMAKE_CURRENT_SOURCE_DIR}/cmake/modules to MODULE_PATH: ${CMAKE_MODULE_PATH}")
 set(CMAKE_MODULE_PATH ${CMAKE_CURRENT_SOURCE_DIR}/cmake/modules ${CMAKE_MODULE_PATH})
 include(GetGitRevisionDescription)
+message("Call git_describe")
 git_describe(GitTagVersion --tags)
 string(REGEX REPLACE "^([0-9]+)\\..*" "\\1" VERSION_MAJOR "${GitTagVersion}")
 string(REGEX REPLACE "^[0-9]+\\.([0-9]+).*" "\\1" VERSION_MINOR "${GitTagVersion}")
