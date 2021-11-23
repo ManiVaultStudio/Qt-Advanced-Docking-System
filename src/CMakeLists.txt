@@ -94,7 +94,7 @@ install(FILES
 )
 install(TARGETS qtadvanceddocking
     EXPORT adsTargets
-    RUNTIME DESTINATION bin
+    RUNTIME DESTINATION .
     LIBRARY DESTINATION lib
     ARCHIVE DESTINATION lib
     INCLUDES DESTINATION include
