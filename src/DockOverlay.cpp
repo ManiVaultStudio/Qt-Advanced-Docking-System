@@ -431,6 +431,7 @@ DockWidgetArea CDockOverlay::showOverlay(QWidget* target)
 	d->LastLocation = InvalidDockWidgetArea;
 
 	// Move it over the target.
+	hide();
 	resize(target->size());
 	QPoint TopLeft = target->mapToGlobal(target->rect().topLeft());
 	move(TopLeft);
@@ -806,7 +807,7 @@ void CDockOverlayCross::setIconColors(const QString& Colors)
 		{"Arrow", CDockOverlayCross::ArrowColor},
 		{"Shadow", CDockOverlayCross::ShadowColor}};
 
-#if (QT_VERSION < QT_VERSION_CHECK(6, 0, 0))
+#if (QT_VERSION < QT_VERSION_CHECK(5, 14, 0))
     auto SkipEmptyParts = QString::SkipEmptyParts;
 #else
     auto SkipEmptyParts = Qt::SkipEmptyParts;
